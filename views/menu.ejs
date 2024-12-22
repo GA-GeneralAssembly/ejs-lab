@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<body>
+  <%- include('./partials/nav') %>
+
+  <h1>Menu</h1>
+
+  <br>
+
+  <h1>Main Course :</h1>
+  <% menu.forEach( item => { %>
+    <% if (item.category == 'mains'){ %>
+      <h2><%= item.name %></h2>
+      <p><strong>Price:</strong> $<%= item.price %></p>
+      <p><strong>Rating:</strong> <%= item.rating %> / 5</p>
+      <p><strong>Details:</strong> <%= item.details %></p>
+      <br>
+    <% } %>
+  <% }) %>
+
+  <hr>
+
+  <h1>Sides :</h1>
+  <% menu.forEach( item => { %>
+    <% if (item.category == 'sides'){ %>
+      <h2><%= item.name %></h2>
+      <p><strong>Price:</strong> $<%= item.price %></p>
+      <p><strong>Rating:</strong> <%= item.rating %> / 5</p>
+      <p><strong>Details:</strong> <%= item.details %></p>
+      <br>
+    <% } %>
+  <% }) %>
+
+  <hr>
+
+  <h1>Desserts :</h1>
+  <% menu.forEach( item => { %>
+    <% if (item.category == 'desserts'){ %>
+      <h2><%= item.name %></h2>
+      <p><strong>Price:</strong> $<%= item.price %></p>
+      <p><strong>Rating:</strong> <%= item.rating %> / 5</p>
+      <p><strong>Details:</strong> <%= item.details %></p>
+      <br>
+    <% } %>
+  <% }) %>
+
+</body>
+</html>
